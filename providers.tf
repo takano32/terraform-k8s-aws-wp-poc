@@ -3,7 +3,8 @@
 ## Terraform Version
 #
 terraform {
-  required_version = ">= 0.12"
+  # https://developer.hashicorp.com/terraform/install
+  required_version = ">= 1.7.0"
 }
 
 #

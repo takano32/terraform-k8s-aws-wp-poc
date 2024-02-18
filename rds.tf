@@ -12,13 +12,14 @@ locals {
 }
 
 module "kubewpdb" {
+  # https://registry.terraform.io/modules/cloudposse/rds-cluster/aws/latest
   source  = "cloudposse/rds-cluster/aws"
-  version = "0.44.1"
+  version = "1.7.0"
 
   engine         = "aurora-mysql"
   engine_mode    = "provisioned"
-  engine_version = "5.7.mysql_aurora.2.09.2"
-  cluster_family = "aurora-mysql5.7"
+  engine_version = "8.0.mysql_aurora.3.04.1"
+  cluster_family = "aurora-mysql8.0"
   cluster_size   = 1
   name           = local.kubewpdb-name
   admin_user     = local.kubewpdb-creds.user

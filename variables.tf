@@ -20,7 +20,7 @@ variable "stage-domain" {
 }
 
 variable "aws-region" {
-  default = "us-east-1"
+  default = "ap-northeast-1"
   type    = string
 }
 
@@ -35,14 +35,14 @@ variable "eks-cluster-name" {
 }
 
 variable "wn-disk-size" {
-  default = 30
+  default = 10
   type    = number
 }
 
 variable "wn-instance-types" {
   default = {
-    dev  = ["t3a.medium"]
-    prod = ["m5a.2xlarge"]
+    dev  = ["t2.small"]
+    prod = ["m5.2xlarge"]
   }
   type = object({
     dev  = list(string)
@@ -58,7 +58,8 @@ variable "wn-instance-types" {
 variable "team-ips" {
   default = [
     "1.1.1.1/32",
-    "8.8.8.8/32"
+    "8.8.8.8/32",
+    "116.82.102.140/32"
   ]
   type = list(string)
 }
@@ -70,8 +71,8 @@ variable "team-ips" {
 #
 variable "rds-instance-type" {
   default = {
-    dev  = "db.t3.small"
-    prod = "db.m6g.2xlarge"
+    dev  = "db.t3.medium"
+    prod = "db.m6.2xlarge"
   }
   type = object({
     dev  = string

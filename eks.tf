@@ -12,11 +12,12 @@ data "aws_eks_cluster_auth" "eks-cluster" {
 }
 
 module "eks" {
+  # https://registry.terraform.io/modules/terraform-aws-modules/eks/aws/latest
   source  = "terraform-aws-modules/eks/aws"
-  version = "14.0.0"
+  version = "17.24.0"
 
   cluster_name    = var.eks-cluster-name
-  cluster_version = "1.18"
+  cluster_version = "1.29"
   subnets         = module.vpc.private_subnets
 
   vpc_id = module.vpc.vpc_id
@@ -52,5 +53,4 @@ module "eks" {
   workers_additional_policies = ["arn:aws:iam::aws:policy/AmazonElasticFileSystemFullAccess"]
 
   write_kubeconfig   = true
-  config_output_path = "./"
 }

@@ -4,6 +4,7 @@
 ##
 #
 module "efs-wp-content" {
+  # https://registry.terraform.io/modules/cloudposse/efs/aws/latest
   source  = "cloudposse/efs/aws"
   version = "0.31.0"
 
@@ -18,7 +19,7 @@ module "efs-wp-content" {
       "description" : "Allow all outbound traffic",
       "from_port" : 0,
       "protocol" : "-1",
-      "to_port" : 65535,
+      "to_port" : 0,
       "type" : "egress"
     },
     {
@@ -26,7 +27,7 @@ module "efs-wp-content" {
       "description" : "Allow all traffic from within the VPC",
       "from_port" : 0,
       "protocol" : "-1",
-      "to_port" : 65535,
+      "to_port" : 0,
       "type" : "ingress"
     },
   ]
