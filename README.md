@@ -20,6 +20,8 @@ https://github.com/ntorga/terraform-k8s-aws-wp-poc/commit/052668d672c01a9b4b14da
 
 052668d672c01a9b4b14dab2613a26eb3b4f631e
 
+Link to commit: [052668d](/commit/052668d672c01a9b4b14dab2613a26eb3b4f631e)  
+
 コードについてのチケットや修正は GitHub.com までお願いします。
 
 その他の質問やフィードバックがあれば以下の連絡先までお願いします。
