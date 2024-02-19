@@ -18,9 +18,7 @@ fork 元から 2024/02/19 に使っても違和感がないように修正をし
 
 https://github.com/ntorga/terraform-k8s-aws-wp-poc/commit/052668d672c01a9b4b14dab2613a26eb3b4f631e
 
-052668d672c01a9b4b14dab2613a26eb3b4f631e
-
-Link to commit: [052668d](/commit/052668d672c01a9b4b14dab2613a26eb3b4f631e)  
+[052668d](https://github.com/ntorga/terraform-k8s-aws-wp-poc/commit/052668d672c01a9b4b14dab2613a26eb3b4f631e)
 
 コードについてのチケットや修正は GitHub.com までお願いします。
 
