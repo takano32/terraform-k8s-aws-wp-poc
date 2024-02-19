@@ -35,7 +35,7 @@ variable "eks-cluster-name" {
 }
 
 variable "wn-disk-size" {
-  default = 10
+  default = 8
   type    = number
 }
 
