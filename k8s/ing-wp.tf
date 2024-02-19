@@ -10,7 +10,8 @@ resource "kubernetes_ingress_v1" "kube-wp" {
       "nginx.ingress.kubernetes.io/backend-protocol"   = "HTTP"
       "nginx.ingress.kubernetes.io/ssl-redirect"       = "false"
       "nginx.ingress.kubernetes.io/force-ssl-redirect" = "false"
-      "nginx.ingress.kubernetes.io/proxy-body-size"    = "250m"
+      "nginx.ingress.kubernetes.io/proxy-body-size"    = "2048m"
+      "nginx.ingress.kubernetes.io/affinity"           = "cookie"
     }
   }
 
