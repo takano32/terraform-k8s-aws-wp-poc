@@ -32,4 +32,5 @@ module "kubewpdb" {
     aws_security_group.kube-wp-sg.id,
     module.eks.cluster_primary_security_group_id
   ]
+  skip_final_snapshot = (var.stage == "dev")
 }
